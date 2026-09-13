@@ -9,7 +9,7 @@
 <meta property="og:description" content="Генеральная, поддерживающая, после ремонта. Фотоотчёт и гарантия. +7 977 564-95-17">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<script>window.KLINER = { bot: "https://t.me/kliner_profi_bot", phoneLink: "tel:+79775649517", phoneText: "+7 977 564-95-17" };</script>
+<script>window.KLINER = { bot: "https://t.me/kliner_profi_bot", channel: "https://t.me/kliner_profi", phoneLink: "tel:+79775649517", phoneText: "+7 977 564-95-17" };</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,6 +46,7 @@
   <div class="hero__cta">
     <a href="#order" class="btn btn--primary">Рассчитать стоимость</a>
     <a href="#" id="heroBot" class="btn btn--ghost">Написать в Telegram</a>
+    <a href="https://t.me/kliner_profi" id="heroChannel" class="btn btn--ghost">Канал с до/после</a>
   </div>
   <ul class="hero__facts">
     <li>Выезд сегодня</li>
@@ -130,7 +131,7 @@
 </section>
 
 <footer class="footer">
-  <p>Клинер Профи Москва · <a href="#" id="footerBot">Telegram</a> · <a href="#" id="footerPhone">+7 977 564-95-17</a></p>
+  <p>Клинер Профи Москва · <a href="#" id="footerBot">Telegram-бот</a> · <a href="https://t.me/kliner_profi" id="footerChannel">Канал</a> · <a href="#" id="footerPhone">+7 977 564-95-17</a></p>
   <p class="footer__small">Работаем официально: самозанятый, чек и договор по запросу. Оплата после приёмки.</p>
 </footer>
 
@@ -142,7 +143,6 @@
     if (!el) return;
     el.href = (id.indexOf('Phone') !== -1) ? K.phoneLink : K.bot;
   });
-
   document.getElementById('navPhone').textContent = K.phoneText;
 
   var form = document.getElementById('orderForm');
